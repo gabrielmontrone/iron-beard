@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Configuração de Media Query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Barba de Ferro</title>
+    <link rel="stylesheet" href="/iron-beard/assets/css/style.css">
+    <script defer src="/iron-beard/assets/script/script.js"></script>
+</head>
+
+<body>
+
+    <!-- Menu Fixo -->
+    <nav class="navbar">
+        <div class="logo"></div>
+        <!-- Itens da Navegação DESKTOP -->
+        <div class="navbar-items">
+            <ul>
+                <li class="nav-item"><a href="#home">HOME</a></li>
+                <li class="nav-item"><a href="#quem-somos">QUEM SOMOS</a></li>
+                <li class="nav-item"><a href="#servicos">SERVIÇOS</a></li>
+                <li class="nav-item"><a href="#">AGENDE</a></li>
+                <li class="nav-item"><a href="#contato">CONTATO</a></li>
+            </ul>
+        </div>
+        <div class="linha-vertical"></div>
+        <div class="icone-insta"></div>
+        <div class="icone-whats"></div> 
+
+        <!-- MOBILE-->
+        <!-- Botão Hamburguer -->
+        <div class="hamburguer-button" onclick="clickMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- Itens da Navegação MOBILE -->
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#home">HOME</a></li>
+                <li class="nav-item"><a href="#quem-somos">QUEM SOMOS</a></li>
+                <li class="nav-item"><a href="#servicos">SERVIÇOS</a></li>
+                <li class="nav-item"><a href="#">AGENDE</a></li>
+                <li class="nav-item"><a href="#contato">CONTATO</a></li>
+            </ul>   
+        </div>
+    </nav>
+    
+
+    <!-- Seção de Página Inicial -->
+    <section class = "home-section" id="home">
+        <!-- Conteúdo da Página Inicial -->
+        <div class = "home-content">
+            <!-- Logo -->
+            <img src="/iron-beard/assets/imgs/logo2.png" alt="" class="logo-2">
+            <a href="#quem-somos"><img src="/iron-beard/assets/imgs/setas.png" alt="" class="setas"></a>
+        </div>
+    </section>
+
+
+
+    <!-- Sessão "QUEM SOMOS" -->
+    <section class = "quem-somos" id="quem-somos">
+        <!-- Conteúdo da Sessão "QUEM SOMOS" à direita -->
+        <div class="quem-somos-content-1">
+            <div class="texto-quem-somos-1">
+                <h1>QUEM SOMOS</h1>
+                <p>Mais do que cortar cabelo e fazer a barba, nossa dedicação é realçar e promover a vaidade masculina. 
+                  A IRON BEARD é inspirada nas barbearias americanas dos anos quarenta, mas com um toque atual. Nossa história começou 
+                  com a ideia de resgatar a autenticidade dos tempos clássicos e misturar com a moda atual.
+                </p>
+            </div>
+        </div>
+
+        <!-- Conteúdo da Sessão "QUEM SOMOS" à esquerda -->
+        <div class="quem-somos-content-2">
+            <div class="texto-quem-somos-2">
+                <h1>O AMBIENTE</h1>
+                <p>
+                    Ao entrar no nosso ambiente, você experimentará uma atmosfera nostálgica, marcada por elementos clássicos como 
+                    posters vintage e uma poltrona de barbeiro que reflete a tradição. Nossos barbeiros responsáveis pelos cortes 
+                    são verdadeiros especialistas, absorvendo toda a inspiração das décadas passadas e integrando-a de forma contemporânea. 
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sessão "SERVIÇOS" -->
+    <section class = "servicos" id="servicos">
+        <!-- Conteúdo da Sessão "SERVIÇOS" -->
+        <div class="tabela-de-servicos">
+            <h1>SERVIÇOS</h1>
+
+            <div class="tipos-de-servicos">
+                <h4>CABELO</h4>
+                <span class="preco">R$80</span>
+            </div>
+
+            <hr>
+
+            <div class="tipos-de-servicos">
+                <h4>BARBA</h4>
+                <span class="preco">R$60</span>
+            </div>
+
+            <hr>
+
+            <div class="tipos-de-servicos">
+                <h4>CABELO + BARBA</h4>
+                <span class="preco">R$125</span>
+            </div>
+
+            <hr>
+
+            <div class="tipos-de-servicos">
+                <h4>CORTE INFANTIL</h4>
+                <span class="preco">R$65</span>
+            </div>
+
+            <hr>
+        </div>
+    </section>
+
+
+  <!-- Sessão de "CONTATO" -->
+<section class="contato" id="contato">
+
+    <!-- Conteúdo da Sessão "CONTATO" -->
+    <div class="formulario-contato">
+        <div class="texto-contato">
+            <h1>Contato</h1>
+
+            <!-- Formulário de Contato -->
+            <form id="formulario" action="#" method="post">
+                <div class="campo-grupo">
+                    <div class="campo">
+                        <input type="text" id="nome" name="nome" placeholder="Nome" autocomplete="off" required>
+                    </div>
+                    <div class="campo">
+                        <input type="tel" id="celular" name="celular" placeholder="Celular" autocomplete="off"
+                        pattern="[0-9]{2}[0-9]{9}" maxlength="11" oninput="formatarCelular(this);" 
+                        required>
+                    </div>
+                </div>
+                <!-- Outros campos permanecem em colunas -->
+                <div class="campo">
+                    <input type="email" id="email" name="email" placeholder="Email" autocomplete="off" required>
+                </div>
+
+                <div class="campo">
+                    <input type="text" id="assunto" name="assunto" placeholder="Assunto" autocomplete="off" required>
+                </div>
+
+                <div class="campo">
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" autocomplete="off" required></textarea>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    
+</body>
+</html>
